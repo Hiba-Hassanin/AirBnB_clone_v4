@@ -7,6 +7,9 @@ from flask import Flask, render_template, make_response, jsonify
 from flask_cors import CORS
 from flasgger import Swagger
 from flasgger.utils import swag_from
+from flask import Flask
+from flask_cors import CORS
+
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
@@ -47,3 +50,12 @@ if __name__ == "__main__":
     if not port:
         port = '5000'
     app.run(host=host, port=port, threaded=True)
+
+
+app = Flask(__name__)
+CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
+
+# Import the rest of your app setup and routes here
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5001)
