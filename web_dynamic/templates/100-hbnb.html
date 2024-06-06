@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100-hbnb</title>
+    <script src="{{ url_for('static', filename='scripts/100-hbnb.js') }}"></script>
+</head>
+<body>
+<div class="locations">
+    <h2>Locations</h2>
+    <h4 id="locations-list"></h4>
+</div>
+<div class="states">
+    <h2>States</h2>
+    <ul>
+        {% for state in states %}
+        <li><input type="checkbox" data-id="{{ state.id }}" data-name="{{ state.name }}"> {{ state.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="cities">
+    <h2>Cities</h2>
+    <ul>
+        {% for city in cities %}
+        <li><input type="checkbox" data-id="{{ city.id }}" data-name="{{ city.name }}"> {{ city.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
