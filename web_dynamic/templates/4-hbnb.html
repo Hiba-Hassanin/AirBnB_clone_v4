@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?{{ cache_id }}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?{{ cache_id }}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/5-filters.css?{{ cache_id }}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{ cache_id }}" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../static/scripts/4-hbnb.js?{{ cache_id }}"></script>
+</head>
+<body>
+<header>
+    <div id="api_status"></div>
+    <!-- Other header content -->
+</header>
+<div class="filters">
+    <h4>Amenities</h4>
+    <ul>
+        <li><input type="checkbox" data-id="1" data-name="WiFi">WiFi</li>
+        <li><input type="checkbox" data-id="2" data-name="Pool">Pool</li>
+        <li><input type="checkbox" data-id="3" data-name="Parking">Parking</li>
+        <li><input type="checkbox" data-id="4" data-name="Pet friendly">Pet friendly</li>
+    </ul>
+    <button>Search</button>
+</div>
+<div class="container">
+    <section class="places">
+        <!-- Places will be loaded here by JavaScript -->
+    </section>
+</div>
+</body>
+</html>
